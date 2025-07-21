@@ -138,4 +138,3 @@ MIT License – see `LICENSE` for details.
 For questions, suggestions, or bug reports:
 
 * Open an issue on [GitHub](https://github.com/Chrisjames1992/CompIgS/issues)
-* Email: [Chinweikechristopher.udoye@Uksh.de](mailto:Chinweikechristopher.udoye@Uksh.de)
