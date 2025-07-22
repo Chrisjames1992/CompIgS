@@ -123,7 +123,7 @@ If you use **CompIgS**, please cite:
 
 You may use the following logo with attribution in presentations and publications:
 
-![CompIgS Logo](logo.png)
+<img width="265" height="112" alt="image" src="https://github.com/user-attachments/assets/c7e5c63b-148f-4f36-b121-344da1aeeea9" />
 
 ---
 
