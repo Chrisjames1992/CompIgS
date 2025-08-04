@@ -24,6 +24,7 @@ Affinity maturation and somatic hypermutation refine antibody specificity. Howev
 * 🖥️ GUI for local, interactive analysis
 * ☁️ Google Colab notebook for quick, cloud-based access
 * 🫿 Windows executable – no coding required
+* Mac Os version-no coding required
 
 ---
 
@@ -45,10 +46,14 @@ Download the standalone executable from:
 * 🔗 [GitHub Releases](https://github.com/Chrisjames1992/CompIgS/releases)
 * 📓 [Zenodo DOI](https://doi.org/10.5281/zenodo.15774119)
 
-**Option 2: Use via Google Colab**
+**Option 2: Run the macOS version**
+Download the standalone from:
+* 🔗 [GitHub Releases](https://github.com/Chrisjames1992/CompIgS/releases)
+
+**Option 3: Use via Google Colab**
 Open and run `CompIgS.ipynb` in Google Colab and follow the instructions to upload your data and begin analysis.
 
-**Option 3: Run GUI locally (Python required)**
+**Option 4: Run GUI locally (Python required)**
 
 ### 🛠️ Requirements
 
@@ -64,7 +69,7 @@ CompIgS/
 ├── CompIgS.ipynb         # Google Colab notebook
 ├── CompIgS_GUI.py        # GUI version for local use
 ├── README.md             # This file
-└── releases/             # Downloadable EXE binaries
+└── releases/             # Downloadable Windows and macOS EXE binaries
 ```
 
 ---
