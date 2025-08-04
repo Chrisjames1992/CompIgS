@@ -24,7 +24,7 @@ Affinity maturation and somatic hypermutation refine antibody specificity. Howev
 * 🖥️ GUI for local, interactive analysis
 * ☁️ Google Colab notebook for quick, cloud-based access
 * 🫿 Windows executable – no coding required
-* Mac Os version-no coding required
+* macOS version-no coding required
 
 ---
 
