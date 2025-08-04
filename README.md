@@ -48,7 +48,7 @@ Download the standalone executable from:
 
 **Option 2: Run the macOS version**
 Download the standalone from:
-* 🔗 [GitHub Releases](https://github.com/Chrisjames1992/CompIgS/releases)
+* 🔗 [GitHub Releases](https://github.com/Chrisjames1992/CompIgS/releases/download/mv.01/CompIgS_GUI.app.zip)
 
 **Option 3: Use via Google Colab**
 Open and run `CompIgS.ipynb` in Google Colab and follow the instructions to upload your data and begin analysis.
