@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/25161869/README.md)
+[README (2).md](https://github.com/user-attachments/files/25162750/README.2.md)
 # BCR Analysis Suite - Integrated CompIgS + FastBCR Analysis Platform
 
 <img width="265" height="112" alt="BCR Analysis Suite Logo" src="https://github.com/user-attachments/assets/c7e5c63b-148f-4f36-b121-344da1aeeea9" />
@@ -90,7 +90,6 @@ This dual-method approach enables comprehensive analysis of clonal relationships
 * 🧠 **Mutation Level Analysis**: Categorize clones as low, moderate, or highly mutated
 * 🔬 **Divergent Clone Detection**: Identify isotype-specific divergent sequences with configurable thresholds
 * 🖥️ **GUI Interface**: User-friendly graphical interface for both methods (no coding required)
-* ☁️ **Google Colab Support**: Cloud-based analysis option for CompIgS
 * 🪟 **Cross-Platform**: Windows (.exe), macOS (.app), and Python/R versions available
 * 🚀 **Performance Optimized**: Parallel processing support for large datasets
 * 📈 **Export Options**: Multiple output formats including CSV, PDF, PNG, and FASTA
@@ -126,64 +125,44 @@ Double-click to run - no Python or R installation needed!
 Download the macOS version:
 * 🔗 [GitHub Releases](https://github.com/Chrisjames1992/CompIgS/releases/download/mv.01/CompIgS_GUI.app.zip)
 
-### Option 3: Google Colab (CompIgS Only)
-
-Open and run `CompIgS.ipynb` in Google Colab - no local installation required!
-
-### Option 4: Python/R Installation
+### Option 3: Python GUI
 
 ```bash
 # Clone the repository
 git clone https://github.com/Chrisjames1992/CompIgS.git
 cd CompIgS
 
-# Install Python dependencies
-pip install -r requirements.txt
-
-# For FastBCR method - install R and required packages
-# In R console:
-install.packages("fastBCR")
-install.packages(c("ggplot2", "dplyr", "stringdist", "ape", "ggtree"))
+# Run the GUI
+python CompIgS_FastBCR.py
 ```
 
 ---
 
 ## 🛠️ Installation
 
-### Requirements
+### Pre-built Applications (Recommended)
 
-**For CompIgS Method:**
-- Python ≥ 3.8
-- Required packages: `pandas`, `numpy`, `PyQt5`, `seaborn`, `matplotlib`, `biopython`, `peptides`
+**Windows Executable (.exe):**
+- Download from [GitHub Releases](https://github.com/Chrisjames1992/CompIgS/releases)
+- Download from [Zenodo](https://doi.org/10.5281/zenodo.15774119)
+- No installation required - just download and run!
 
-**For FastBCR Method:**
-- R ≥ 4.0
-- Required R packages: 
-  - `fastBCR` (core analysis) - Install from [GitHub](https://github.com/ZhangLabTJU/fastBCR)
-  - `ggplot2`, `dplyr`, `stringdist` (data manipulation)
-  - `ape`, `ggtree`, `Biostrings`, `msa` (phylogenetic analysis)
-  - `gridExtra`, `RColorBrewer`, `pheatmap` (visualization)
-  - `data.table`, `parallel` (performance optimization)
+**macOS Application (.app):**
+- Download from [GitHub Releases](https://github.com/Chrisjames1992/CompIgS/releases/download/mv.01/CompIgS_GUI.app.zip)
+- Unzip and drag to Applications folder
 
-**To install fastBCR in R:**
-```r
-# Install Bioconductor dependencies first
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+**Python GUI:**
+- Clone repository: `git clone https://github.com/Chrisjames1992/CompIgS.git`
+- Run: `python CompIgS_FastBCR.py`
+- All Python and R code included in the repository
 
-BiocManager::install(c("msa", "ggmsa", "Biostrings", "ggtree"))
+### System Requirements
 
-# Install fastBCR from GitHub
-if (!requireNamespace("devtools", quietly = TRUE))
-    install.packages("devtools")
-
-devtools::install_github("ZhangLabTJU/fastBCR")
-```
-
-**System Requirements:**
-- RAM: 8GB minimum, 16GB+ recommended for large datasets
-- Storage: 1GB+ free space for output files
-- OS: Windows 10+, macOS 10.14+, or Linux (Ubuntu 18.04+)
+- **RAM:** 8GB minimum, 16GB+ recommended for large datasets
+- **Storage:** 1GB+ free space for output files
+- **OS:** Windows 10+, macOS 10.14+, or Linux (Ubuntu 18.04+)
+- **Python:** ≥ 3.8 (for Python GUI)
+- **R:** ≥ 4.0 (for FastBCR method)
 
 ---
 
@@ -539,19 +518,8 @@ If you use **FastBCR** specifically, please also cite:
 **Original FastBCR:**
 - https://github.com/ZhangLabTJU/fastBCR
 
-### External Tools & Resources
-
-**IMGT/HighV-QUEST:**
+**IMGT/HighV-QUEST (for data generation):**
 - http://www.imgt.org/HighV-QUEST/
-
-**Change-O (AIRR pipeline):**
-- https://changeo.readthedocs.io/
-
-**IgBLAST:**
-- https://www.ncbi.nlm.nih.gov/igblast/
-
-**AIRR Standards:**
-- https://docs.airr-community.org/
 
 ---
 
@@ -628,15 +596,8 @@ Areas where contributions are especially valuable:
    - Restart application after R installation
 
 2. **"fastBCR package missing"**
-   - In R console:
-   ```r
-   # Install dependencies
-   BiocManager::install(c("msa", "ggmsa", "Biostrings", "ggtree"))
-   
-   # Install fastBCR from GitHub
-   devtools::install_github("ZhangLabTJU/fastBCR")
-   ```
-   - See https://github.com/ZhangLabTJU/fastBCR for full installation instructions
+   - The fastBCR R package and all dependencies are included in the repository
+   - See https://github.com/ZhangLabTJU/fastBCR for package documentation
 
 3. **Out of memory errors**
    - Reduce dataset size or increase system RAM
