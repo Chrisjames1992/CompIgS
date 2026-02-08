@@ -43,7 +43,7 @@ This dual-method approach enables comprehensive analysis of clonal relationships
 - Identifies divergent clones based on CDR3 amino acid differences
 - Categorizes mutations as low (0-5), moderate (6-11), or high (≥12)
 
-**Key Features:**
+**Features:**
 - Clonal expansion analysis
 - Copy number ratio calculations between isotypes
 - Mutation profile comparison (CDR2 and CDR3 regions)
@@ -84,14 +84,12 @@ This dual-method approach enables comprehensive analysis of clonal relationships
 
 ## 📦 Key Features
 
-* 🔍 **Dual Analysis Methods**: Choose between exact VDJ matching (CompIgS) or VJ + junction similarity (FastBCR)
-* 🧬 **Comprehensive BCR Profiling**: Analyze clonal expansion, mutation patterns, and divergence
-* 📊 **Rich Visualizations**: Automated generation of plots, heatmaps, lineage trees, and MSA alignments
-* 🧠 **Mutation Level Analysis**: Categorize clones as low, moderate, or highly mutated
+* 🔍 **Analysis Methods**: Choose between exact VDJ matching (CompIgS) or VJ + junction similarity (FastBCR)
+* 🧬 **BCR Profiling**: Analyze clonal expansion, mutation patterns, and divergence
+* 📊 **Visualizations**: Automated generation of plots, heatmaps, lineage trees, and MSA alignments
+* 🧠 **Mutation Analysis**: Categorize clones as low, moderate, or highly mutated
 * 🔬 **Divergent Clone Detection**: Identify isotype-specific divergent sequences with configurable thresholds
 * 🖥️ **GUI Interface**: User-friendly graphical interface for both methods (no coding required)
-* 🪟 **Cross-Platform**: Windows (.exe), macOS (.app), and Python/R versions available
-* 🚀 **Performance Optimized**: Parallel processing support for large datasets
 * 📈 **Export Options**: Multiple output formats including CSV, PDF, PNG, and FASTA
 
 ---
@@ -120,11 +118,6 @@ Download the standalone `.exe` from:
 
 Double-click to run - no Python or R installation needed!
 
-### Option 2: macOS Application
-
-Download the macOS version:
-* 🔗 [GitHub Releases](https://github.com/Chrisjames1992/CompIgS/releases/download/mv.01/CompIgS_GUI.app.zip)
-
 ### Option 3: Python GUI
 
 ```bash
@@ -147,10 +140,6 @@ python CompIgS_FastBCR.py
 - Download from [Zenodo](https://doi.org/10.5281/zenodo.15774119)
 - No installation required - just download and run!
 
-**macOS Application (.app):**
-- Download from [GitHub Releases](https://github.com/Chrisjames1992/CompIgS/releases/download/mv.01/CompIgS_GUI.app.zip)
-- Unzip and drag to Applications folder
-
 **Python GUI:**
 - Clone repository: `git clone https://github.com/Chrisjames1992/CompIgS.git`
 - Run: `python CompIgS_FastBCR.py`
@@ -160,7 +149,7 @@ python CompIgS_FastBCR.py
 
 - **RAM:** 8GB minimum, 16GB+ recommended for large datasets
 - **Storage:** 1GB+ free space for output files
-- **OS:** Windows 10+, macOS 10.14+, or Linux (Ubuntu 18.04+)
+- **OS:** Windows 10+,Linux (Ubuntu 18.04+)
 - **Python:** ≥ 3.8 (for Python GUI)
 - **R:** ≥ 4.0 (for FastBCR method)
 
@@ -206,7 +195,7 @@ Requires **2 AIRR-formatted TSV files** (output from Change-O or IgBLAST):
 
 **Accepted File Formats:**
 - `.tsv` (tab-separated values)
-- Must be AIRR-compliant format from Change-O pipeline
+- Must be AIRR-compliant format 
 
 ---
 
