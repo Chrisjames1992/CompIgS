@@ -3,7 +3,7 @@
 
 <img width="265" height="112" alt="BCR Analysis Suite Logo" src="https://github.com/user-attachments/assets/c7e5c63b-148f-4f36-b121-344da1aeeea9" />
 
-**BCR Analysis Suite** is an open-source computational platform that combines two powerful methods for comparative analysis of B cell receptor (BCR) repertoires across antibody isotypes.
+**BCR Analysis Suite** is an open-source computational platform that combines two methods for comparative analysis of B cell receptor (BCR) repertoires across antibody isotypes.
 
 ---
 
@@ -13,12 +13,12 @@ Antibodies, or immunoglobulins (Ig), are produced by B cells and form a diverse 
 
 Affinity maturation and somatic hypermutation refine antibody specificity over time. Understanding how clonotypes are shared or diverge between different antibody isotypes provides critical insights into immune responses.
 
-**BCR Analysis Suite** integrates two complementary approaches:
+**BCR Analysis Suite** integrates two approaches:
 
 1. **CompIgS Method** - Uses exact V+D+J gene matching to identify clonotypes
-2. **FastBCR Method** - Uses V+J genes with k-mer seeding and junction similarity analysis
+2. **FastBCR Method** - Uses V+J genes with k-mer seeding for within-isotype clusters and junction similarity analysis to identify shared clusters between two isotypes.
 
-This dual-method approach enables comprehensive analysis of clonal relationships, somatic hypermutation patterns, and divergent clone identification across antibody isotypes.
+This dual-method approach enables analysis of clonal relationships, somatic hypermutation patterns, and identification of divergent clones across two antibody isotypes.
 
 ---
 
@@ -48,12 +48,11 @@ This dual-method approach enables comprehensive analysis of clonal relationships
 - Copy number ratio calculations between isotypes
 - Mutation profile comparison (CDR2 and CDR3 regions)
 - VH sequence extraction and completion
-- Amino acid composition analysis using EMBOSS categories
-
+- 
 ### FastBCR Method (R/VJ + K-mer + Junction Similarity)
 
 **Input Requirements:**
-- AIRR-formatted TSV files (`db-pass.tsv` from Change-O/IgBLAST pipeline)
+- AIRR-formatted TSV files 
 - Files needed:
   - Isotype 1 TSV file (e.g., IgE)
   - Isotype 2 TSV file (e.g., IgG1)
@@ -63,28 +62,26 @@ This dual-method approach enables comprehensive analysis of clonal relationships
 - **Between-isotype sharing:** Identifies shared clusters using:
   - V+J gene matching
   - Configurable junction amino acid similarity threshold (default 80%)
-- Minimum amino acid difference threshold for divergent clones (default ≥2)
+- Minimum amino acid difference threshold for divergent clones (default ≥1)
 - Minimum cluster depth filtering (default ≥3 sequences)
 
-**Key Features:**
-- Hierarchical clustering within each isotype
+**Features:**
 - Shared cluster identification between isotypes
 - Divergent clone detection at all mutation levels
 - SHM analysis for shared and divergent populations
 - Lineage tree visualization for clonal relationships
 - Multiple sequence alignments (MSA) for divergent sequences
-- Comprehensive statistical reporting
+- Statistical reporting
 
-**Key Difference from CompIgS:**
+**Difference from CompIgS:**
 - FastBCR does not require D-gene matching and uses junction sequence similarity
 - More flexible for datasets where D-gene assignment may be ambiguous
 - Optimized for parallel processing (Windows and Unix compatible)
 
 ---
 
-## 📦 Key Features
+## 📦Features
 
-* 🔍 **Analysis Methods**: Choose between exact VDJ matching (CompIgS) or VJ + junction similarity (FastBCR)
 * 🧬 **BCR Profiling**: Analyze clonal expansion, mutation patterns, and divergence
 * 📊 **Visualizations**: Automated generation of plots, heatmaps, lineage trees, and MSA alignments
 * 🧠 **Mutation Analysis**: Categorize clones as low, moderate, or highly mutated
@@ -205,7 +202,6 @@ Requires **2 AIRR-formatted TSV files** (output from Change-O or IgBLAST):
 
 1. **Launch the application**
    - Windows: Double-click `CompIgS_FastBCR.exe`
-   - macOS: Open `CompIgS_GUI.app`
    - Python: Run `python CompIgS_FastBCR.py`
 
 2. **Select Analysis Method**
@@ -457,25 +453,12 @@ source("fastBCR_analysis_script.R")
 - **Moderate (6-11 mutations):** Undergoing affinity maturation
 - **High (≥12 mutations):** Highly mutated, affinity-matured clones
 
-### Key Metrics
-
-**Copy Number Ratio (Isotype 1 / Isotype 2):**
-- Ratio > 2: Isotype 1-biased expansion
-- Ratio 0.5-2: Balanced expansion
-- Ratio < 0.5: Isotype 2-biased expansion
-
-**Junction Similarity (FastBCR):**
-- ≥80%: Likely clonally related
-- 60-79%: Possibly related (review V/J genes)
-- <60%: Unlikely to be clonally related
-
 ---
 
 ## 📚 Citation
 
 If you use **BCR Analysis Suite** or **CompIgS**, please cite:
 
-> Udoye, C. C., Mehrabani Khasraghi, S., Witt, P., Biswas, S., Manz, R., & Fähnrich, A. (2025). *CompIgS: A Computational Workflow for Comparative Analysis of Related Clonotypes within Distinct Antibody Subclasses*. BMC Bioinformatics.
 
 If you use **FastBCR** specifically, please also cite:
 
@@ -491,9 +474,6 @@ If you use **FastBCR** specifically, please also cite:
 
 ### Publications
 
-**CompIgS:**
-- Udoye, C. C., et al. (2025). BMC Bioinformatics.
-
 **FastBCR:**
 - Wang, K., & Zhang, J. (2023). *fastBCR: a k-mer-based approach for fast inferencing clonal families from large-scale B cell repertoire sequencing data*. Briefings in Bioinformatics, 24(6), bbad404.
 - DOI: https://doi.org/10.1093/bib/bbad404
@@ -506,10 +486,6 @@ If you use **FastBCR** specifically, please also cite:
 
 **Original FastBCR:**
 - https://github.com/ZhangLabTJU/fastBCR
-
-**IMGT/HighV-QUEST (for data generation):**
-- http://www.imgt.org/HighV-QUEST/
-
 ---
 
 ## 🖼️ Logo
@@ -569,9 +545,8 @@ Areas where contributions are especially valuable:
 
 1. **Data Privacy**: All analysis is performed locally - no data is sent to external servers
 2. **Memory Requirements**: Large datasets (>100K sequences) may require 16GB+ RAM
-3. **Processing Time**: FastBCR analysis with lineage trees can take 30-60 minutes for large datasets
-4. **File Size**: IMGT output files can be large; ensure adequate storage space
-5. **Column Names**: The tool auto-detects column name variations (e.g., "Sequence ID" vs "Sequence.ID")
+3. **Processing Time**: FastBCR analysis with lineage trees can take < 10 minutes for large datasets
+4. **Column Names**: The tool auto-detects column name variations (e.g., "Sequence ID" vs "Sequence.ID")
 
 ---
 
@@ -603,8 +578,6 @@ Areas where contributions are especially valuable:
    - Ensure all required R packages installed
    - Check output directory write permissions
    - Review log for specific error messages
-
-For additional help, see [Troubleshooting Guide](https://github.com/Chrisjames1992/CompIgS/wiki/Troubleshooting).
 
 ---
 
