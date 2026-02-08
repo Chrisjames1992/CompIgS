@@ -619,4 +619,3 @@ For additional help, see [Troubleshooting Guide](https://github.com/Chrisjames19
 
 ---
 
-**Built with ❤️ for the BCR analysis community**
